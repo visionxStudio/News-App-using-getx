@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/news_cart_widget.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -56,11 +57,7 @@ class _HomepageState extends State<Homepage> {
         body: TabBarView(
           children: tabs
               .map(
-                (model) => Container(
-                  child: Text(
-                    model.toString(),
-                  ),
-                ),
+                (model) => NewsCartWidget(),
               )
               .toList(),
         ),
